@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>DevProcess - Spider Man 2</title>
   </head>
   <body>
-    <h1>Projeto Spider Man 2</h1>
+    <div class="container">
+      <header>
+        <div class="container">
+          <img src="./img/logo.svg" alt="Logo Spider Man 2" />
+          <nav>
+            <a href="#">Visão Geral</a>
+            <a href="#">Edições</a>
+            <a href="#">Características</a>
+            <a href="#">Gameplay</a>
+          </nav>
+          <button>Adicionar ao carrinho</button>
+        </div>
+      </header>
+
+      <section class="s-hero">
+        <div class="container">
+          <div class="left">
+            <div class="plataform">
+              <span>Disponível para</span>
+              <strong>PS5</strong>
+            </div>
+            <h1>Marvel´s Spider-Man 2</h1>
+            <p class="description">
+              Os Spiders Peter Parker e Miles Morales estão de volta em mais uma
+              aventura eletrizante da famosa franquia Marvel's Spider-Man para
+              PS5.
+            </p>
+            <div class="value">
+              <h3>R$ 349,90</h3>
+              <div class="btns">
+                <button class="btn-cart">Adicionar ao carrinho</button>
+                <button class="btn-favorite">
+                  <img src="./img/heart.svg" alt="Icone de Coração" />
+                </button>
+              </div>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <img src="./img/icon-ps5.svg" alt="Icone do PS5" />
+                  <p>Lançado 20/10/2023</p>
+                </li>
+                <li><p>Versão para PS5</p></li>
+              </ul>
+              <ul>
+                <li>
+                  <img
+                    src="./img/icon-singleplayer.svg"
+                    alt="Icone de controles"
+                  />
+                  <p>1 jogador</p>
+                </li>
+                <li>
+                  <p>Compatível com função de vibração e efeito gatilho</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <img src="./img/plus.svg" alt="Icone de controles" />
+                  <p>Compatível com a ajuda do jogo</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right">
+            <span>12</span>
+            <p>Violência Compras no jogo</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
