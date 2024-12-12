@@ -56,7 +56,7 @@ header {
   align-items: center;
   background-color: rgba(0, 4, 7, 0.9);
   backdrop-filter: blur(4px);
-  z-index: 3;
+  z-index: 1000;
 }
 
 header .container {
@@ -115,6 +115,7 @@ header button:hover {
   left: 0;
   z-index: 2;
   transform: rotate(180deg);
+  pointer-events: none;
 }
 
 .s-hero .container {
@@ -124,9 +125,11 @@ header button:hover {
 }
 
 .s-hero .left {
+  position: relative;
   width: 100%;
   max-width: 62.2rem;
   animation: fadeLeft 1s forwards;
+  z-index: 5;
 }
 
 .s-hero .left .plataform {
@@ -298,6 +301,7 @@ header button:hover {
   top: 89px;
   right: 0;
   z-index: 4;
+  pointer-events: none;
 }
 
 .s-videos .container {
@@ -414,6 +418,7 @@ header button:hover {
 /* Styles Section Vilão */
 .s-vilao {
   position: relative;
+  text-align: center;
   width: 100%;
   height: 800px;
   display: flex;
@@ -567,5 +572,135 @@ footer .right span {
   to {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+
+/* Media Query */
+
+@media (max-width: 1200px) {
+  .s-hero {
+    height: auto;
+    padding: 7rem 0;
+  }
+
+  .s-videos {
+    padding: 6rem 0;
+  }
+
+  .s-videos .btn {
+    display: none;
+  }
+
+  .s-vilao {
+    height: 55rem;
+  }
+
+  .footer {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 991px) {
+  header nav {
+    display: none;
+  }
+  .s-hero .left {
+    max-width: 100%;
+  }
+
+  .s-hero .right {
+    display: none;
+  }
+
+  .s-vilao::before,
+  .s-vilao::after {
+    height: 10rem;
+  }
+
+  footer .left {
+    text-align: center;
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  header .logo {
+    max-width: 126px;
+  }
+
+  header button {
+    padding: 0.95 2rem;
+  }
+
+  .s-hero {
+    padding: 4rem 0;
+    background-size: 1200px;
+    background-position-x: 63%;
+  }
+
+  .s-hero .left h1 {
+    font-size: 4.2rem;
+    max-width: 83%;
+    line-height: 120%;
+  }
+
+  .s-hero .left .description {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+  }
+
+  .s-hero .left .value h3 {
+    margin-bottom: 1rem;
+  }
+
+  .s-hero .left .value {
+    margin-bottom: 4rem;
+  }
+
+  .s-hero .left ul li {
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .s-hero .left ul p {
+    font-size: 1.4rem;
+  }
+
+  .s-hero .left ul:nth-child(2) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .s-videos {
+    padding: 4rem 0;
+  }
+
+  .s-vilao {
+    height: auto;
+    padding: 6rem 0;
+    background-size: 900px;
+  }
+
+  .s-vilao h2 {
+    font-size: 3.6rem;
+  }
+
+  .s-vilao p {
+    font-size: 1.6rem;
+    max-width: 30rem;
+    margin-bottom: 4rem;
+  }
+
+  footer {
+    padding: 4rem 0;
+  }
+
+  footer::before {
+    background-size: 120%;
   }
 }
